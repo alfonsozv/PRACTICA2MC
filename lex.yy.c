@@ -447,9 +447,56 @@ char *yytext;
 #line 1 "p2.l"
 #line 2 "p2.l"
 #include <stdio.h>
-#include "funciones.c"  // Incluye el archivo de funciones
-#line 452 "lex.yy.c"
-#line 453 "lex.yy.c"
+#include <string.h>
+
+// Variables globales para las expresiones regulares
+char *arch_texto = "txt|doc|text|docx|rtf|odt|pdf|html|xml|json|csv|md|tex|log|cfg|ini|yml|yaml|html|css|js|php";
+char *arc_video = "mp4|avi|mkv|mov|wmv|flv|mpg|3gp|webm|rm|rmvb|m4v|ts";
+char *arch_audio = "mp3|wav|wma|ogg|aac|flac|alac|aiff|dsd|pcm|m4a";
+char *arch_imagenes = "jpg|jpeg|png|gif|bmp|svg|tiff|raw|psd|ai|eps|indd|pdf";
+char *arch_directorio = "zip|rar|7z|tar|gz|bz2|xz|iso|dmg|vcd|img|torrent";
+char *arch_presentacion = "ppt|pptx|odp";
+char *arch_base_datos = "mdb|accdb|sqlite";
+char *arch_correo = "eml|pst";
+char *arch_ebook = "epub|mobi";
+char *arch_codigo_fuente = "c|cpp|java|py|rb";
+char *arch_diseno_grafico = "psd|ai|cdr";
+char *arch_hojas_calculo = "xls|xlsx|ods";
+
+// Función para determinar el tipo de archivo
+void determinarTipoArchivo(char *extension) {
+    if (strstr(arch_texto, extension) != NULL) {
+        printf("Tipo de archivo: Texto\n");
+        printf("Extensión: %s\n", extension);
+    } else if (strstr(arc_video, extension) != NULL) {
+        printf("Tipo de archivo: Video\n");
+    } else if (strstr(arch_audio, extension) != NULL) {
+        printf("Tipo de archivo: Audio\n");
+    } else if (strstr(arch_imagenes, extension) != NULL) {
+        printf("Tipo de archivo: Imagen\n");
+    } else if (strstr(arch_directorio, extension) != NULL) {
+        printf("Tipo de archivo: Directorio comprimido\n");
+    } else if (strstr(arch_presentacion, extension) != NULL) {
+        printf("Tipo de archivo: Presentación\n");
+    } else if (strstr(arch_base_datos, extension) != NULL) {
+        printf("Tipo de archivo: Base de datos\n");
+    } else if (strstr(arch_correo, extension) != NULL) {
+        printf("Tipo de archivo: Correo\n");
+    } else if (strstr(arch_ebook, extension) != NULL) {
+        printf("Tipo de archivo: eBook\n");
+    } else if (strstr(arch_codigo_fuente, extension) != NULL) {
+        printf("Tipo de archivo: Código fuente\n");
+    } else if (strstr(arch_diseno_grafico, extension) != NULL) {
+        printf("Tipo de archivo: Diseño gráfico\n");
+    } else if (strstr(arch_hojas_calculo, extension) != NULL) {
+        printf("Tipo de archivo: Hoja de cálculo\n");
+    } else {
+        printf("Tipo de archivo desconocido\n");
+    }
+}
+
+#line 499 "lex.yy.c"
+#line 500 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -666,10 +713,10 @@ YY_DECL
 		}
 
 	{
-#line 28 "p2.l"
+#line 75 "p2.l"
 
 
-#line 673 "lex.yy.c"
+#line 720 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -728,20 +775,20 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 30 "p2.l"
+#line 77 "p2.l"
 {
     printf("Nombre del archivo: %s\n", yytext);
     printf("Nombre: %.*s\n", (int)(strcspn(yytext, ".")), yytext);
     printf("Extensión: %s\n", yytext + strcspn(yytext, ".") + 1);
-    determinarTipoArchivo(yytext + strcspn(yytext, ".") + 1); // Llama a la función del archivo funciones.c
+    determinarTipoArchivo(yytext + strcspn(yytext, ".") + 1);
 }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 37 "p2.l"
+#line 84 "p2.l"
 ECHO;
 	YY_BREAK
-#line 745 "lex.yy.c"
+#line 792 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1746,6 +1793,6 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 37 "p2.l"
+#line 84 "p2.l"
 
 
