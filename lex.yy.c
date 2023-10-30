@@ -1,5 +1,6 @@
+#line 2 "lex.yy.c"
 
-#line 3 "lex.yy.c"
+#line 4 "lex.yy.c"
 
 #define  YY_INT_ALIGNED short int
 
@@ -376,14 +377,14 @@ static const YY_CHAR yy_ec[256] =
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    2,    1,    3,    3,    3,
         3,    3,    3,    3,    3,    3,    3,    1,    1,    1,
-        1,    1,    1,    1,    4,    4,    4,    4,    4,    4,
-        4,    4,    4,    4,    4,    4,    4,    4,    4,    4,
-        4,    4,    4,    4,    4,    4,    4,    4,    4,    4,
-        1,    1,    1,    1,    3,    1,    4,    4,    4,    4,
+        1,    1,    1,    1,    3,    3,    3,    3,    3,    3,
+        3,    3,    3,    3,    3,    3,    3,    3,    3,    3,
+        3,    3,    3,    3,    3,    3,    3,    3,    3,    3,
+        1,    1,    1,    1,    3,    1,    3,    3,    3,    3,
 
-        4,    4,    4,    4,    4,    4,    4,    4,    4,    4,
-        4,    4,    4,    4,    4,    4,    4,    4,    4,    4,
-        4,    4,    1,    1,    1,    1,    1,    1,    1,    1,
+        3,    3,    3,    3,    3,    3,    3,    3,    3,    3,
+        3,    3,    3,    3,    3,    3,    3,    3,    3,    3,
+        3,    3,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -400,33 +401,33 @@ static const YY_CHAR yy_ec[256] =
         1,    1,    1,    1,    1
     } ;
 
-static const YY_CHAR yy_meta[5] =
+static const YY_CHAR yy_meta[4] =
     {   0,
-        1,    2,    2,    3
+        1,    1,    2
     } ;
 
 static const flex_int16_t yy_base[12] =
     {   0,
-        0,    0,   10,   11,    7,    0,    6,    0,   11,    3,
+        6,    5,    7,   10,    0,    0,    0,    0,   10,    3,
         4
     } ;
 
 static const flex_int16_t yy_def[12] =
     {   0,
-        9,    1,    9,    9,   10,   11,   10,   11,    0,    9,
+       10,   10,    9,    9,    9,   11,    5,   11,    0,    9,
         9
     } ;
 
-static const flex_int16_t yy_nxt[16] =
+static const flex_int16_t yy_nxt[14] =
     {   0,
-        4,    4,    5,    5,    7,    7,    8,    6,    6,    9,
-        3,    9,    9,    9,    9
+        9,    6,    7,    4,    4,    8,    9,    5,    5,    3,
+        9,    9,    9
     } ;
 
-static const flex_int16_t yy_chk[16] =
+static const flex_int16_t yy_chk[14] =
     {   0,
-        1,    1,    1,    1,   10,   10,   11,    7,    5,    3,
-        9,    9,    9,    9,    9
+        0,    5,    5,   10,   10,   11,    3,    2,    1,    9,
+        9,    9,    9
     } ;
 
 static yy_state_type yy_last_accepting_state;
@@ -446,8 +447,9 @@ char *yytext;
 #line 1 "p2.l"
 #line 2 "p2.l"
 #include <stdio.h>
-#line 450 "lex.yy.c"
-#line 451 "lex.yy.c"
+#include "funciones.c"  // Incluye el archivo de funciones
+#line 452 "lex.yy.c"
+#line 453 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -664,10 +666,10 @@ YY_DECL
 		}
 
 	{
-#line 27 "p2.l"
+#line 28 "p2.l"
 
 
-#line 671 "lex.yy.c"
+#line 673 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -700,7 +702,7 @@ yy_match:
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
 			++yy_cp;
 			}
-		while ( yy_base[yy_current_state] != 11 );
+		while ( yy_base[yy_current_state] != 10 );
 
 yy_find_action:
 		yy_act = yy_accept[yy_current_state];
@@ -726,19 +728,20 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 29 "p2.l"
+#line 30 "p2.l"
 {
     printf("Nombre del archivo: %s\n", yytext);
     printf("Nombre: %.*s\n", (int)(strcspn(yytext, ".")), yytext);
     printf("Extensión: %s\n", yytext + strcspn(yytext, ".") + 1);
+    determinarTipoArchivo(yytext + strcspn(yytext, ".") + 1); // Llama a la función del archivo funciones.c
 }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 35 "p2.l"
+#line 37 "p2.l"
 ECHO;
 	YY_BREAK
-#line 742 "lex.yy.c"
+#line 745 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1743,6 +1746,6 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 35 "p2.l"
+#line 37 "p2.l"
 
 

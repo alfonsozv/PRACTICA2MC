@@ -1,5 +1,6 @@
 %{
 #include <stdio.h>
+#include "funciones.c"  // Incluye el archivo de funciones
 %}
 
 %option noyywrap
@@ -9,7 +10,7 @@ numero [0-9]
 letra_numero [a-zA-Z0-9_]
 signo [\+\-\*\/\=\%\>\<\!\&\|\~\^\?\:]
 nombre_archivo ({letra_numero}+)
-nombre_extension \.{letra}+
+nombre_extension \.{letra_numero}+
 
 arch_texto "\.txt|\.doc|\.text|\.docx|\.rtf|\.odt|\.pdf|\.html|\.xml|\.json|\.csv|\.md|\.tex|\.log|\.cfg|\.ini|\.yml|\.yaml|\.html|\.css|\.js|\.php"
 arc_video "\.mp4|\.avi|\.mkv|\.mov|\.wmv|\.flv|\.mpg|\.3gp|\.webm|\.rm|\.rmvb|\.m4v|\.ts"
@@ -30,6 +31,7 @@ arch_hojas_calculo "\.xls|\.xlsx|\.ods"
     printf("Nombre del archivo: %s\n", yytext);
     printf("Nombre: %.*s\n", (int)(strcspn(yytext, ".")), yytext);
     printf("Extensión: %s\n", yytext + strcspn(yytext, ".") + 1);
+    determinarTipoArchivo(yytext + strcspn(yytext, ".") + 1); // Llama a la función del archivo funciones.c
 }
 
 %%
