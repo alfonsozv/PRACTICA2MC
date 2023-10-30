@@ -1,63 +1,43 @@
-README 
+# Analizador de Tipos de Archivo
 
-```markdown
-# Analizador de Sentimientos con TextBlob y Flex
-
-Este es un programa simple que utiliza la biblioteca TextBlob para realizar un análisis de sentimientos en un texto proporcionado. Puede detectar si el tono del texto es "feliz," "triste," o "neutro."
-
-## Requisitos
-
-- Python 3.x
-- TextBlob: `pip install textblob`
-- Flex (o Lex): Puede instalarse en sistemas basados en Unix con `sudo apt-get install flex`
+Este es un sencillo analizador de tipos de archivo que toma un nombre de archivo como entrada y determina su tipo en función de su extensión. El analizador léxico fue creado utilizando la herramienta Flex.
 
 ## Uso
 
-1. Asegúrate de tener Python y TextBlob instalados.
+1. Asegúrate de tener Flex instalado en tu sistema. Si no lo tienes, puedes instalarlo siguiendo las instrucciones específicas de tu sistema operativo.
 
-2. Compila el analizador léxico con `flex`:
+2. Compila el analizador léxico utilizando los siguientes comandos:
 
-   ```bash
-   flex sentiment_analyzer.l
-   ```
-
-3. Compila el programa C:
-
-   ```bash
-   gcc -o sentiment_analyzer lex.yy.c -lfl
-   ```
-
-4. Ejecuta el programa:
-
-   ```bash
-   ./sentiment_analyzer
-   ```
-
-5. Ingresa texto y presiona Enter. El programa imprimirá el tono emocional detectado.
-
-## Ejemplo
-
-Ejemplo de entrada y salida:
-
-```
-Entrada: "Hoy es un día soleado y hermoso"
-Salida: Tono feliz: Hoy es un día soleado y hermoso
-
-Entrada: "Perdí a mi mascota, estoy muy triste"
-Salida: Tono triste: Perdí a mi mascota, estoy muy triste
-
-Entrada: "El análisis de sentimientos es interesante"
-Salida: Tono neutro: El análisis de sentimientos es interesante
+```shell
+flex -o lex.yy.c p2.l
+gcc -o analizador lex.yy.c -lfl
 ```
 
-## Notas
+3. Ejecuta el analizador proporcionando el nombre de archivo como argumento. Reemplaza `nombre_archivo.ext` con el nombre del archivo que deseas analizar. El programa imprimirá el nombre del archivo, su extensión y el tipo de archivo determinado.
 
-- Este es un ejemplo básico de análisis de sentimientos y no garantiza resultados precisos en todos los casos. Puedes ajustar los umbrales de polaridad según tus necesidades.
+```shell
+./analizador nombre_archivo.ext
+```
 
-- Ten en cuenta que el análisis de sentimientos en aplicaciones del mundo real suele requerir modelos de lenguaje más avanzados y datos de entrenamiento adecuados.
+## Tipos de Archivo Soportados
 
-- Este programa es una demostración de cómo integrar Flex (analizador léxico) con TextBlob (análisis de sentimientos). Puedes personalizarlo y ampliarlo según tus necesidades.
+El analizador puede determinar los siguientes tipos de archivo basándose en la extensión:
 
-## Resumen
+- Texto
+- Video
+- Audio
+- Imagen
+- Directorio comprimido
+- Presentación
+- Base de datos
+- Correo
+- eBook
+- Código fuente
+- Diseño gráfico
+- Hoja de cálculo
 
-Este `README.md` proporciona información sobre cómo instalar, compilar y ejecutar el programa, junto con ejemplos de entrada y salida. También incluye notas importantes y una sección para contribuciones y la licencia. Asegúrate de ajustar la información a tus necesidades específicas y personalizar el archivo `README` para tu proyecto.
+Si la extensión del archivo no coincide con ninguno de estos tipos, se mostrará "Tipo de archivo desconocido".
+
+## Autor
+
+**Alfonso Julián Zapata Velasco**
