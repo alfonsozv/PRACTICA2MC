@@ -355,8 +355,8 @@ static void yynoreturn yy_fatal_error ( const char* msg  );
 	(yy_hold_char) = *yy_cp; \
 	*yy_cp = '\0'; \
 	(yy_c_buf_p) = yy_cp;
-#define YY_NUM_RULES 2
-#define YY_END_OF_BUFFER 3
+#define YY_NUM_RULES 14
+#define YY_END_OF_BUFFER 15
 /* This struct is not used in this scanner,
    but its presence is necessary. */
 struct yy_trans_info
@@ -364,27 +364,41 @@ struct yy_trans_info
 	flex_int32_t yy_verify;
 	flex_int32_t yy_nxt;
 	};
-static const flex_int16_t yy_accept[10] =
+static const flex_int16_t yy_accept[135] =
     {   0,
-        0,    0,    3,    2,    2,    0,    0,    1,    0
+        0,    0,   15,   13,   14,   13,    0,    0,    0,    0,
+        0,    0,   10,    0,    0,    0,    0,    0,    0,    0,
+        0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
+        0,    0,    0,    5,    0,    0,    4,    0,    0,    0,
+        0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
+        0,    0,    0,    0,    0,    0,    0,    0,    1,    0,
+        0,    1,    0,    0,    0,    0,    0,    0,    0,    0,
+        0,    0,    0,   10,    0,    2,    0,    0,    0,    0,
+        0,    0,    0,    2,    0,    0,    0,    0,    0,    0,
+        0,    0,    0,    0,    3,    0,    0,    0,    4,   11,
+
+        1,    1,    8,    0,    0,    0,    0,    0,    0,    0,
+        7,    0,    6,   12,    1,    6,    4,    0,    0,    1,
+        0,    0,    0,   12,    0,    0,    9,    1,    0,    0,
+        0,    0,    0,    0
     } ;
 
 static const YY_CHAR yy_ec[256] =
     {   0,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    2,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    2,    1,    3,    3,    3,
-        3,    3,    3,    3,    3,    3,    3,    1,    1,    1,
-        1,    1,    1,    1,    3,    3,    3,    3,    3,    3,
-        3,    3,    3,    3,    3,    3,    3,    3,    3,    3,
-        3,    3,    3,    3,    3,    3,    3,    3,    3,    3,
-        1,    1,    1,    1,    3,    1,    3,    3,    3,    3,
+        1,    1,    1,    1,    1,    3,    1,    4,    4,    5,
+        6,    7,    4,    4,    8,    4,    4,    1,    1,    1,
+        1,    1,    1,    1,    4,    4,    4,    4,    4,    4,
+        4,    4,    4,    4,    4,    4,    4,    4,    4,    4,
+        4,    4,    4,    4,    4,    4,    4,    4,    4,    4,
+        1,    1,    1,    1,    4,    1,    9,   10,   11,   12,
 
-        3,    3,    3,    3,    3,    3,    3,    3,    3,    3,
-        3,    3,    3,    3,    3,    3,    3,    3,    3,    3,
-        3,    3,    1,    1,    1,    1,    1,    1,    1,    1,
+       13,   14,   15,   16,   17,   18,   19,   20,   21,   22,
+       23,   24,   25,   26,   27,   28,   29,   30,   31,   32,
+       33,   34,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -401,33 +415,110 @@ static const YY_CHAR yy_ec[256] =
         1,    1,    1,    1,    1
     } ;
 
-static const YY_CHAR yy_meta[4] =
+static const YY_CHAR yy_meta[35] =
     {   0,
-        1,    1,    2
+        1,    1,    2,    2,    2,    2,    2,    2,    2,    2,
+        2,    2,    2,    2,    2,    2,    2,    2,    2,    2,
+        2,    2,    2,    2,    2,    2,    2,    2,    2,    2,
+        2,    2,    2,    2
     } ;
 
-static const flex_int16_t yy_base[12] =
+static const flex_int16_t yy_base[137] =
     {   0,
-        6,    5,    7,   10,    0,    0,    0,    0,   10,    3,
-        4
+        0,    3,  202,  203,  203,  198,    1,  197,  184,  164,
+       27,    5,   28,   22,   27,  177,    3,  168,   32,   37,
+      172,   51,   50,   65,   57,   43,   90,  183,   70,   74,
+       51,  176,  168,  203,  180,  179,  175,  179,  170,  162,
+      180,  158,  168,  158,   63,  166,  169,  167,  158,   42,
+       71,  163,  155,  160,   85,  151,  143,   69,  149,  156,
+       79,  160,  139,   20,   99,   88,  153,  146,  152,  141,
+      149,  135,   92,  203,   92,  132,  147,  140,  144,  132,
+      125,  142,  129,  203,  126,  141,  122,  141,   91,  123,
+      129,  127,  127,  122,  203,  133,  130,  132,  203,  203,
+
+      203,  110,  203,  131,  129,  119,  126,  128,  121,  113,
+      203,  117,  203,  203,  203,  101,  203,  122,  114,  102,
+      115,  102,  106,   94,   99,  101,  203,  203,   82,   83,
+       73,   34,   13,  203,  123,    6
     } ;
 
-static const flex_int16_t yy_def[12] =
+static const flex_int16_t yy_def[137] =
     {   0,
-       10,   10,    9,    9,    9,   11,    5,   11,    0,    9,
-        9
+      135,  135,  134,  134,  134,  136,  134,  136,  134,  134,
+      134,  134,  134,  134,  134,  134,  134,  134,  134,  134,
+      134,  134,  134,  134,  134,  134,  134,  134,  134,  134,
+      134,  134,  134,  134,  134,  134,  134,  134,  134,  134,
+      134,  134,  134,  134,  134,  134,  134,  134,  134,  134,
+      134,  134,  134,  134,  134,  134,  134,  134,  134,  134,
+      134,  134,  134,  134,  134,  134,  134,  134,  134,  134,
+      134,  134,  134,  134,  134,  134,  134,  134,  134,  134,
+      134,  134,  134,  134,  134,  134,  134,  134,  134,  134,
+      134,  134,  134,  134,  134,  134,  134,  134,  134,  134,
+
+      134,  134,  134,  134,  134,  134,  134,  134,  134,  134,
+      134,  134,  134,  134,  134,  134,  134,  134,  134,  134,
+      134,  134,  134,  134,  134,  134,  134,  134,  134,  134,
+      134,  134,  134,    0,  134,  134
     } ;
 
-static const flex_int16_t yy_nxt[14] =
+static const flex_int16_t yy_nxt[238] =
     {   0,
-        9,    6,    7,    4,    4,    8,    9,    5,    5,    3,
-        9,    9,    9
+        4,    5,    4,    4,    5,    4,    9,    8,   10,   11,
+       12,   13,   14,   15,   16,   17,   18,   19,   20,   52,
+       21,   22,  134,   23,   24,   40,   25,   26,   27,  112,
+       28,   29,   30,   31,   32,   35,   34,   36,   41,   42,
+       34,   43,   46,   37,   47,   57,   38,   49,   48,   84,
+       50,   44,   54,   55,   45,  133,   39,   61,   56,   92,
+       58,   66,   62,   59,   67,   75,   74,   78,   99,   63,
+      104,   93,   79,   64,   65,   68,   69,   76,   87,  105,
+       70,  109,   88,   99,   77,  111,   71,   95,   72,  101,
+       89,   73,  101,   90,   91,  132,  107,   74,   80,   95,
+
+       84,  101,   81,  117,   95,   84,   82,   34,   84,  131,
+      111,  113,   83,   84,  114,  101,   84,   34,  101,  103,
+       84,   85,   99,    6,    6,  114,   84,  130,   99,  101,
+      129,   84,  113,  127,  101,   99,   74,   99,  128,   95,
+      127,  101,   95,   95,  126,   34,  101,  125,  101,  124,
+      123,   95,   34,  101,  122,  121,  120,   34,   99,  119,
+      101,  118,  116,   99,  101,  115,   95,   95,   84,  111,
+      101,  110,  108,   34,   34,  106,   99,  103,   95,  102,
+       34,   74,  101,  100,   34,   99,   84,   98,   97,   96,
+       95,   84,   94,   86,   60,   53,   51,   34,   33,    7,
+
+        7,  134,    3,  134,  134,  134,  134,  134,  134,  134,
+      134,  134,  134,  134,  134,  134,  134,  134,  134,  134,
+      134,  134,  134,  134,  134,  134,  134,  134,  134,  134,
+      134,  134,  134,  134,  134,  134,  134
     } ;
 
-static const flex_int16_t yy_chk[14] =
+static const flex_int16_t yy_chk[238] =
     {   0,
-        0,    5,    5,   10,   10,   11,    3,    2,    1,    9,
-        9,    9,    9
+        1,    1,    1,    2,    2,    2,    7,  136,    7,    7,
+        7,    7,    7,    7,    7,    7,    7,    7,    7,   17,
+        7,    7,    0,    7,    7,   12,    7,    7,    7,   64,
+        7,    7,    7,    7,    7,   11,   17,   11,   12,   13,
+      133,   13,   14,   11,   14,   20,   11,   15,   14,   64,
+       15,   13,   19,   19,   13,  132,   11,   22,   19,   31,
+       20,   23,   22,   20,   23,   25,   25,   26,   50,   22,
+       50,   31,   26,   22,   22,   24,   24,   25,   29,   51,
+       24,   58,   29,   58,   25,  131,   24,   61,   24,   45,
+       29,   24,   45,   30,   30,  130,   55,   24,   27,   89,
+
+       51,   55,   27,   73,   65,   65,   27,   30,   61,  129,
+      126,   66,   27,   65,   66,   66,   27,   75,  125,   73,
+       89,   27,   75,  135,  135,  124,  123,  122,  121,  120,
+      119,  118,  116,  112,  110,  109,  108,  107,  106,  105,
+      104,  102,   98,   97,   96,   94,   93,   92,   91,   90,
+       88,   87,   86,   85,   83,   82,   81,   80,   79,   78,
+       77,   76,   72,   71,   70,   69,   68,   67,   63,   62,
+       60,   59,   57,   56,   54,   53,   52,   49,   48,   47,
+       46,   44,   43,   42,   41,   40,   39,   38,   37,   36,
+       35,   33,   32,   28,   21,   18,   16,   10,    9,    8,
+
+        6,    3,  134,  134,  134,  134,  134,  134,  134,  134,
+      134,  134,  134,  134,  134,  134,  134,  134,  134,  134,
+      134,  134,  134,  134,  134,  134,  134,  134,  134,  134,
+      134,  134,  134,  134,  134,  134,  134
     } ;
 
 static yy_state_type yy_last_accepting_state;
@@ -448,55 +539,8 @@ char *yytext;
 #line 2 "p2.l"
 #include <stdio.h>
 #include <string.h>
-
-// Variables globales para las expresiones regulares
-char *arch_texto = "txt|doc|text|docx|rtf|odt|pdf|html|xml|json|csv|md|tex|log|cfg|ini|yml|yaml|html|css|js|php";
-char *arc_video = "mp4|avi|mkv|mov|wmv|flv|mpg|3gp|webm|rm|rmvb|m4v|ts";
-char *arch_audio = "mp3|wav|wma|ogg|aac|flac|alac|aiff|dsd|pcm|m4a";
-char *arch_imagenes = "jpg|jpeg|png|gif|bmp|svg|tiff|raw|psd|ai|eps|indd|pdf";
-char *arch_directorio = "zip|rar|7z|tar|gz|bz2|xz|iso|dmg|vcd|img|torrent";
-char *arch_presentacion = "ppt|pptx|odp";
-char *arch_base_datos = "mdb|accdb|sqlite";
-char *arch_correo = "eml|pst";
-char *arch_ebook = "epub|mobi";
-char *arch_codigo_fuente = "c|cpp|java|py|rb";
-char *arch_diseno_grafico = "psd|ai|cdr";
-char *arch_hojas_calculo = "xls|xlsx|ods";
-
-// Función para determinar el tipo de archivo
-void determinarTipoArchivo(char *extension) {
-    if (strstr(arch_texto, extension) != NULL) {
-        printf("Tipo de archivo: Texto\n");
-        printf("Extensión: %s\n", extension);
-    } else if (strstr(arc_video, extension) != NULL) {
-        printf("Tipo de archivo: Video\n");
-    } else if (strstr(arch_audio, extension) != NULL) {
-        printf("Tipo de archivo: Audio\n");
-    } else if (strstr(arch_imagenes, extension) != NULL) {
-        printf("Tipo de archivo: Imagen\n");
-    } else if (strstr(arch_directorio, extension) != NULL) {
-        printf("Tipo de archivo: Directorio comprimido\n");
-    } else if (strstr(arch_presentacion, extension) != NULL) {
-        printf("Tipo de archivo: Presentación\n");
-    } else if (strstr(arch_base_datos, extension) != NULL) {
-        printf("Tipo de archivo: Base de datos\n");
-    } else if (strstr(arch_correo, extension) != NULL) {
-        printf("Tipo de archivo: Correo\n");
-    } else if (strstr(arch_ebook, extension) != NULL) {
-        printf("Tipo de archivo: eBook\n");
-    } else if (strstr(arch_codigo_fuente, extension) != NULL) {
-        printf("Tipo de archivo: Código fuente\n");
-    } else if (strstr(arch_diseno_grafico, extension) != NULL) {
-        printf("Tipo de archivo: Diseño gráfico\n");
-    } else if (strstr(arch_hojas_calculo, extension) != NULL) {
-        printf("Tipo de archivo: Hoja de cálculo\n");
-    } else {
-        printf("Tipo de archivo desconocido\n");
-    }
-}
-
-#line 499 "lex.yy.c"
-#line 500 "lex.yy.c"
+#line 543 "lex.yy.c"
+#line 544 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -713,10 +757,10 @@ YY_DECL
 		}
 
 	{
-#line 75 "p2.l"
+#line 15 "p2.l"
 
 
-#line 720 "lex.yy.c"
+#line 764 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -743,13 +787,13 @@ yy_match:
 			while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 				{
 				yy_current_state = (int) yy_def[yy_current_state];
-				if ( yy_current_state >= 10 )
+				if ( yy_current_state >= 135 )
 					yy_c = yy_meta[yy_c];
 				}
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
 			++yy_cp;
 			}
-		while ( yy_base[yy_current_state] != 10 );
+		while ( yy_base[yy_current_state] != 203 );
 
 yy_find_action:
 		yy_act = yy_accept[yy_current_state];
@@ -775,20 +819,140 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 77 "p2.l"
+#line 17 "p2.l"
 {
     printf("Nombre del archivo: %s\n", yytext);
     printf("Nombre: %.*s\n", (int)(strcspn(yytext, ".")), yytext);
     printf("Extensión: %s\n", yytext + strcspn(yytext, ".") + 1);
-    determinarTipoArchivo(yytext + strcspn(yytext, ".") + 1);
+    printf("Tipo de archivo: Texto\n");
 }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 84 "p2.l"
+#line 24 "p2.l"
+{
+    printf("Nombre del archivo: %s\n", yytext);
+    printf("Nombre: %.*s\n", (int)(strcspn(yytext, ".")), yytext);
+    printf("Extensión: %s\n", yytext + strcspn(yytext, ".") + 1);
+    printf("Tipo de archivo: Video\n");
+}
+	YY_BREAK
+case 3:
+YY_RULE_SETUP
+#line 31 "p2.l"
+{
+    printf("Nombre del archivo: %s\n", yytext);
+    printf("Nombre: %.*s\n", (int)(strcspn(yytext, ".")), yytext);
+    printf("Extensión: %s\n", yytext + strcspn(yytext, ".") + 1);
+    printf("Tipo de archivo: Audio\n");
+}
+	YY_BREAK
+case 4:
+YY_RULE_SETUP
+#line 38 "p2.l"
+{
+    printf("Nombre del archivo: %s\n", yytext);
+    printf("Nombre: %.*s\n", (int)(strcspn(yytext, ".")), yytext);
+    printf("Extensión: %s\n", yytext + strcspn(yytext, ".") + 1);
+    printf("Tipo de archivo: Imagen\n");
+}
+	YY_BREAK
+case 5:
+YY_RULE_SETUP
+#line 45 "p2.l"
+{
+    printf("Nombre del archivo: %s\n", yytext);
+    printf("Nombre: %.*s\n", (int)(strcspn(yytext, ".")), yytext);
+    printf("Extensión: %s\n", yytext + strcspn(yytext, ".") + 1);
+    printf("Tipo de archivo: Directorio comprimido\n");
+}
+	YY_BREAK
+case 6:
+YY_RULE_SETUP
+#line 52 "p2.l"
+{
+    printf("Nombre del archivo: %s\n", yytext);
+    printf("Nombre: %.*s\n", (int)(strcspn(yytext, ".")), yytext);
+    printf("Extensión: %s\n", yytext + strcspn(yytext, ".") + 1);
+    printf("Tipo de archivo: Presentación\n");
+}
+	YY_BREAK
+case 7:
+YY_RULE_SETUP
+#line 59 "p2.l"
+{
+    printf("Nombre del archivo: %s\n", yytext);
+    printf("Nombre: %.*s\n", (int)(strcspn(yytext, ".")), yytext);
+    printf("Extensión: %s\n", yytext + strcspn(yytext, ".") + 1);
+    printf("Tipo de archivo: Base de datos\n");
+}
+	YY_BREAK
+case 8:
+YY_RULE_SETUP
+#line 66 "p2.l"
+{
+    printf("Nombre del archivo: %s\n", yytext);
+    printf("Nombre: %.*s\n", (int)(strcspn(yytext, ".")), yytext);
+    printf("Extensión: %s\n", yytext + strcspn(yytext, ".") + 1);
+    printf("Tipo de archivo: Correo\n");
+}
+	YY_BREAK
+case 9:
+YY_RULE_SETUP
+#line 73 "p2.l"
+{
+    printf("Nombre del archivo: %s\n", yytext);
+    printf("Nombre: %.*s\n", (int)(strcspn(yytext, ".")), yytext);
+    printf("Extensión: %s\n", yytext + strcspn(yytext, ".") + 1);
+    printf("Tipo de archivo: eBook\n");
+}
+	YY_BREAK
+case 10:
+YY_RULE_SETUP
+#line 80 "p2.l"
+{
+    printf("Nombre del archivo: %s\n", yytext);
+    printf("Nombre: %.*s\n", (int)(strcspn(yytext, ".")), yytext);
+    printf("Extensión: %s\n", yytext + strcspn(yytext, ".") + 1);
+    printf("Tipo de archivo: Código fuente\n");
+}
+	YY_BREAK
+case 11:
+YY_RULE_SETUP
+#line 87 "p2.l"
+{
+    printf("Nombre del archivo: %s\n", yytext);
+    printf("Nombre: %.*s\n", (int)(strcspn(yytext, ".")), yytext);
+    printf("Extensión: %s\n", yytext + strcspn(yytext, ".") + 1);
+    printf("Tipo de archivo: Diseño gráfico\n");
+}
+	YY_BREAK
+case 12:
+YY_RULE_SETUP
+#line 94 "p2.l"
+{
+    printf("Nombre del archivo: %s\n", yytext);
+    printf("Nombre: %.*s\n", (int)(strcspn(yytext, ".")), yytext);
+    printf("Extensión: %s\n", yytext + strcspn(yytext, ".") + 1);
+    printf("Tipo de archivo: Hoja de cálculo\n");
+}
+	YY_BREAK
+case 13:
+YY_RULE_SETUP
+#line 101 "p2.l"
+{
+    printf("Nombre del archivo: %s\n", yytext);
+    printf("Nombre: %s\n", yytext);
+    printf("Extensión: No tiene extensión\n");
+    printf("Tipo de archivo: Desconocido\n");
+}
+	YY_BREAK
+case 14:
+YY_RULE_SETUP
+#line 108 "p2.l"
 ECHO;
 	YY_BREAK
-#line 792 "lex.yy.c"
+#line 956 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1085,7 +1249,7 @@ static int yy_get_next_buffer (void)
 		while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 			{
 			yy_current_state = (int) yy_def[yy_current_state];
-			if ( yy_current_state >= 10 )
+			if ( yy_current_state >= 135 )
 				yy_c = yy_meta[yy_c];
 			}
 		yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
@@ -1113,11 +1277,11 @@ static int yy_get_next_buffer (void)
 	while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 		{
 		yy_current_state = (int) yy_def[yy_current_state];
-		if ( yy_current_state >= 10 )
+		if ( yy_current_state >= 135 )
 			yy_c = yy_meta[yy_c];
 		}
 	yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
-	yy_is_jam = (yy_current_state == 9);
+	yy_is_jam = (yy_current_state == 134);
 
 		return yy_is_jam ? 0 : yy_current_state;
 }
@@ -1793,6 +1957,11 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 84 "p2.l"
+#line 108 "p2.l"
 
+
+int main() {
+    yylex();
+    return 0;
+}
 
