@@ -9,8 +9,8 @@ Este es un sencillo analizador de tipos de archivo que toma un nombre de archivo
 2. Compila el analizador léxico utilizando los siguientes comandos:
 
 ```shell
-flex -o lex.yy.c p2.l
-gcc -o analizador lex.yy.c -lfl
+$ make
+$ ./analizador
 ```
 
 3. Ejecuta el analizador proporcionando el nombre de archivo como argumento. Reemplaza `nombre_archivo.ext` con el nombre del archivo que deseas analizar. El programa imprimirá el nombre del archivo, su extensión y el tipo de archivo determinado.

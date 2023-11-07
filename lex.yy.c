@@ -943,7 +943,7 @@ YY_RULE_SETUP
 {
     printf("Nombre del archivo: %s\n", yytext);
     printf("Nombre: %s\n", yytext);
-    printf("Extensión: No tiene extensión\n");
+    printf("Extensión: Desconocida por el sistema\n");
     printf("Tipo de archivo: Desconocido\n");
 }
 	YY_BREAK
