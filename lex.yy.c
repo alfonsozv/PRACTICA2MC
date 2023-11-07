@@ -821,120 +821,120 @@ case 1:
 YY_RULE_SETUP
 #line 17 "p2.l"
 {
-    printf("Nombre del archivo: %s\n", yytext);
+    printf("¡Documento de texto detectado! Nombre del archivo: %s\n", yytext);
     printf("Nombre: %.*s\n", (int)(strcspn(yytext, ".")), yytext);
     printf("Extensión: %s\n", yytext + strcspn(yytext, ".") + 1);
-    printf("Tipo de archivo: Texto\n");
+    printf("Tipo de archivo: Texto, la forma más antigua de almacenar información escrita.\n");
 }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
 #line 24 "p2.l"
 {
-    printf("Nombre del archivo: %s\n", yytext);
+    printf("¡Película en pantalla! Nombre del archivo: %s\n", yytext);
     printf("Nombre: %.*s\n", (int)(strcspn(yytext, ".")), yytext);
     printf("Extensión: %s\n", yytext + strcspn(yytext, ".") + 1);
-    printf("Tipo de archivo: Video\n");
+    printf("Tipo de archivo: Video, una ventana al mundo del entretenimiento.\n");
 }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
 #line 31 "p2.l"
 {
-    printf("Nombre del archivo: %s\n", yytext);
+    printf("¡Escuchando música! Nombre del archivo: %s\n", yytext);
     printf("Nombre: %.*s\n", (int)(strcspn(yytext, ".")), yytext);
     printf("Extensión: %s\n", yytext + strcspn(yytext, ".") + 1);
-    printf("Tipo de archivo: Audio\n");
+    printf("Tipo de archivo: Audio, la banda sonora de la vida.\n");
 }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
 #line 38 "p2.l"
 {
-    printf("Nombre del archivo: %s\n", yytext);
+    printf("¡Obra de arte visual! Nombre del archivo: %s\n", yytext);
     printf("Nombre: %.*s\n", (int)(strcspn(yytext, ".")), yytext);
     printf("Extensión: %s\n", yytext + strcspn(yytext, ".") + 1);
-    printf("Tipo de archivo: Imagen\n");
+    printf("Tipo de archivo: Imagen, la belleza capturada en píxeles.\n");
 }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
 #line 45 "p2.l"
 {
-    printf("Nombre del archivo: %s\n", yytext);
+    printf("¡Tesoro comprimido! Nombre del archivo: %s\n", yytext);
     printf("Nombre: %.*s\n", (int)(strcspn(yytext, ".")), yytext);
     printf("Extensión: %s\n", yytext + strcspn(yytext, ".") + 1);
-    printf("Tipo de archivo: Directorio comprimido\n");
+    printf("Tipo de archivo: Directorio comprimido, como una caja de sorpresas digital.\n");
 }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
 #line 52 "p2.l"
 {
-    printf("Nombre del archivo: %s\n", yytext);
+    printf("¡Presentación en pantalla! Nombre del archivo: %s\n", yytext);
     printf("Nombre: %.*s\n", (int)(strcspn(yytext, ".")), yytext);
     printf("Extensión: %s\n", yytext + strcspn(yytext, ".") + 1);
-    printf("Tipo de archivo: Presentación\n");
+    printf("Tipo de archivo: Presentación, la herramienta de comunicación visual.\n");
 }
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
 #line 59 "p2.l"
 {
-    printf("Nombre del archivo: %s\n", yytext);
+    printf("¡Base de datos bajo análisis! Nombre del archivo: %s\n", yytext);
     printf("Nombre: %.*s\n", (int)(strcspn(yytext, ".")), yytext);
     printf("Extensión: %s\n", yytext + strcspn(yytext, ".") + 1);
-    printf("Tipo de archivo: Base de datos\n");
+    printf("Tipo de archivo: Base de datos, el corazón de la información.\n");
 }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
 #line 66 "p2.l"
 {
-    printf("Nombre del archivo: %s\n", yytext);
+    printf("¡Correo en la bandeja! Nombre del archivo: %s\n", yytext);
     printf("Nombre: %.*s\n", (int)(strcspn(yytext, ".")), yytext);
     printf("Extensión: %s\n", yytext + strcspn(yytext, ".") + 1);
-    printf("Tipo de archivo: Correo\n");
+    printf("Tipo de archivo: Correo, la correspondencia digital.\n");
 }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
 #line 73 "p2.l"
 {
-    printf("Nombre del archivo: %s\n", yytext);
+    printf("¡Leyendo un eBook! Nombre del archivo: %s\n", yytext);
     printf("Nombre: %.*s\n", (int)(strcspn(yytext, ".")), yytext);
     printf("Extensión: %s\n", yytext + strcspn(yytext, ".") + 1);
-    printf("Tipo de archivo: eBook\n");
+    printf("Tipo de archivo: eBook, la biblioteca en tu bolsillo.\n");
 }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
 #line 80 "p2.l"
 {
-    printf("Nombre del archivo: %s\n", yytext);
+    printf("¡Código fuente detectado! Nombre del archivo: %s\n", yytext);
     printf("Nombre: %.*s\n", (int)(strcspn(yytext, ".")), yytext);
     printf("Extensión: %s\n", yytext + strcspn(yytext, ".") + 1);
-    printf("Tipo de archivo: Código fuente\n");
+    printf("Tipo de archivo: Código fuente, las instrucciones de la tecnología.\n");
 }
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
 #line 87 "p2.l"
 {
-    printf("Nombre del archivo: %s\n", yytext);
+    printf("¡Creando diseño! Nombre del archivo: %s\n", yytext);
     printf("Nombre: %.*s\n", (int)(strcspn(yytext, ".")), yytext);
     printf("Extensión: %s\n", yytext + strcspn(yytext, ".") + 1);
-    printf("Tipo de archivo: Diseño gráfico\n");
+    printf("Tipo de archivo: Diseño gráfico, la creatividad hecha digital.\n");
 }
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
 #line 94 "p2.l"
 {
-    printf("Nombre del archivo: %s\n", yytext);
+    printf("¡Hoja de cálculo en acción! Nombre del archivo: %s\n", yytext);
     printf("Nombre: %.*s\n", (int)(strcspn(yytext, ".")), yytext);
     printf("Extensión: %s\n", yytext + strcspn(yytext, ".") + 1);
-    printf("Tipo de archivo: Hoja de cálculo\n");
+    printf("Tipo de archivo: Hoja de cálculo, el mundo de los números.\n");
 }
 	YY_BREAK
 case 13:
@@ -944,7 +944,7 @@ YY_RULE_SETUP
     printf("Nombre del archivo: %s\n", yytext);
     printf("Nombre: %s\n", yytext);
     printf("Extensión: Desconocida por el sistema\n");
-    printf("Tipo de archivo: Desconocido\n");
+    printf("Tipo de archivo: Desconocido, ¡un misterio digital!\n");
 }
 	YY_BREAK
 case 14:
