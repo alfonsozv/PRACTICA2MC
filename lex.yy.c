@@ -830,150 +830,150 @@ case 1:
 YY_RULE_SETUP
 #line 17 "p2.l"
 {
-    printf("¡Documento de texto detectado! Nombre del archivo: %s\n", yytext);
+    printf("\n¡Documento de texto detectado! Nombre del archivo: %s\n", yytext);
     printf("Nombre: %.*s\n", (int)(strcspn(yytext, ".")), yytext);
     printf("Extensión: %s\n", yytext + strcspn(yytext, ".") + 1);
     printf("Tipo de archivo: Texto\n");
-    printf("Curiosidad: Los archivos de texto son ampliamente utilizados para el almacenamiento de información en un formato legible por humanos.");
+    printf("Curiosidad: Los archivos de texto son ampliamente utilizados para el almacenamiento de información en un formato legible por humanos./n");
 }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
 #line 25 "p2.l"
 {
-    printf("¡Película en pantalla! Nombre del archivo: %s\n", yytext);
+    printf("\n¡Película en pantalla! Nombre del archivo: %s\n", yytext);
     printf("Nombre: %.*s\n", (int)(strcspn(yytext, ".")), yytext);
     printf("Extensión: %s\n", yytext + strcspn(yytext, ".") + 1);
     printf("Tipo de archivo: Video\n");
-    printf("Curiosidad: Los archivos de video contienen secuencias de imágenes en movimiento y son fundamentales en la industria del entretenimiento.");
+    printf("Curiosidad: Los archivos de video contienen secuencias de imágenes en movimiento y son fundamentales en la industria del entretenimiento./n");
 }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
 #line 33 "p2.l"
 {
-    printf("¡Escuchando música! Nombre del archivo: %s\n", yytext);
+    printf("\n¡Escuchando música! Nombre del archivo: %s\n", yytext);
     printf("Nombre: %.*s\n", (int)(strcspn(yytext, ".")), yytext);
     printf("Extensión: %s\n", yytext + strcspn(yytext, ".") + 1);
     printf("Tipo de archivo: Audio\n");
-    printf("Curiosidad: Los archivos de audio almacenan sonidos y música, y han evolucionado a lo largo de los años en términos de calidad de audio.");
+    printf("Curiosidad: Los archivos de audio almacenan sonidos y música, y han evolucionado a lo largo de los años en términos de calidad de audio./n");
 }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
 #line 41 "p2.l"
 {
-    printf("¡Obra de arte visual! Nombre del archivo: %s\n", yytext);
+    printf("\n¡Obra de arte visual! Nombre del archivo: %s\n", yytext);
     printf("Nombre: %.*s\n", (int)(strcspn(yytext, ".")), yytext);
     printf("Extensión: %s\n", yytext + strcspn(yytext, ".") + 1);
     printf("Tipo de archivo: Imagen\n");
-    printf("Curiosidad: Los archivos de imagen capturan imágenes visuales y son esenciales en diseño gráfico y fotografía.");
+    printf("Curiosidad: Los archivos de imagen capturan imágenes visuales y son esenciales en diseño gráfico y fotografía./n");
 }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
 #line 49 "p2.l"
 {
-    printf("¡Tesoro comprimido! Nombre del archivo: %s\n", yytext);
+    printf("\n¡Tesoro comprimido! Nombre del archivo: %s\n", yytext);
     printf("Nombre: %.*s\n", (int)(strcspn(yytext, ".")), yytext);
     printf("Extensión: %s\n", yytext + strcspn(yytext, ".") + 1);
     printf("Tipo de archivo: Directorio comprimido\n");
-    printf("Curiosidad: Los archivos comprimidos ahorran espacio de almacenamiento y facilitan la transferencia de múltiples archivos.");
+    printf("Curiosidad: Los archivos comprimidos ahorran espacio de almacenamiento y facilitan la transferencia de múltiples archivos./n");
 }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
 #line 57 "p2.l"
 {
-    printf("¡Presentación en pantalla! Nombre del archivo: %s\n", yytext);
+    printf("\n¡Presentación en pantalla! Nombre del archivo: %s\n", yytext);
     printf("Nombre: %.*s\n", (int)(strcspn(yytext, ".")), yytext);
     printf("Extensión: %s\n", yytext + strcspn(yytext, ".") + 1);
     printf("Tipo de archivo: Presentación\n");
-    printf("Curiosidad: Los archivos de presentación se utilizan para crear y mostrar diapositivas con contenido visual y texto.");
+    printf("Curiosidad: Los archivos de presentación se utilizan para crear y mostrar diapositivas con contenido visual y texto./n");
 }
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
 #line 65 "p2.l"
 {
-    printf("¡Base de datos bajo análisis! Nombre del archivo: %s\n", yytext);
+    printf("\n¡Base de datos bajo análisis! Nombre del archivo: %s\n", yytext);
     printf("Nombre: %.*s\n", (int)(strcspn(yytext, ".")), yytext);
     printf("Extensión: %s\n", yytext + strcspn(yytext, ".") + 1);
     printf("Tipo de archivo: Base de datos\n");
-    printf("Curiosidad: Las bases de datos almacenan información estructurada y son esenciales en aplicaciones empresariales y de software.");
+    printf("Curiosidad: Las bases de datos almacenan información estructurada y son esenciales en aplicaciones empresariales y de software./n");
 }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
 #line 73 "p2.l"
 {
-    printf("¡Correo en la bandeja! Nombre del archivo: %s\n", yytext);
+    printf("\n¡Correo en la bandeja! Nombre del archivo: %s\n", yytext);
     printf("Nombre: %.*s\n", (int)(strcspn(yytext, ".")), yytext);
     printf("Extensión: %s\n", yytext + strcspn(yytext, ".") + 1);
     printf("Tipo de archivo: Correo\n");
-    printf("Curiosidad: Los archivos de correo electrónico almacenan mensajes y son cruciales para la comunicación en línea.");
+    printf("Curiosidad: Los archivos de correo electrónico almacenan mensajes y son cruciales para la comunicación en línea./n");
 }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
 #line 81 "p2.l"
 {
-    printf("¡Leyendo un eBook! Nombre del archivo: %s\n", yytext);
+    printf("\n¡Leyendo un eBook! Nombre del archivo: %s\n", yytext);
     printf("Nombre: %.*s\n", (int)(strcspn(yytext, ".")), yytext);
     printf("Extensión: %s\n", yytext + strcspn(yytext, ".") + 1);
     printf("Tipo de archivo: eBook\n");
-    printf("Curiosidad: Los eBooks son libros electrónicos que se pueden leer en dispositivos electrónicos como lectores de libros electrónicos y tabletas.");
+    printf("Curiosidad: Los eBooks son libros electrónicos que se pueden leer en dispositivos electrónicos como lectores de libros electrónicos y tabletas./n");
 }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
 #line 89 "p2.l"
 {
-    printf("¡Código fuente detectado! Nombre del archivo: %s\n", yytext);
+    printf("\n¡Código fuente detectado! Nombre del archivo: %s\n", yytext);
     printf("Nombre: %.*s\n", (int)(strcspn(yytext, ".")), yytext);
     printf("Extensión: %s\n", yytext + strcspn(yytext, ".") + 1);
     printf("Tipo de archivo: Código fuente\n");
-    printf("Curiosidad: Los archivos de código fuente contienen instrucciones legibles por máquina utilizadas para desarrollar software.");
+    printf("Curiosidad: Los archivos de código fuente contienen instrucciones legibles por máquina utilizadas para desarrollar software./n");
 }
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
 #line 97 "p2.l"
 {
-    printf("¡Creando diseño! Nombre del archivo: %s\n", yytext);
+    printf("\n¡Creando diseño! Nombre del archivo: %s\n", yytext);
     printf("Nombre: %.*s\n", (int)(strcspn(yytext, ".")), yytext);
     printf("Extensión: %s\n", yytext + strcspn(yytext, ".") + 1);
     printf("Tipo de archivo: Diseño gráfico\n");
-    printf("Curiosidad: Los archivos de diseño gráfico se utilizan en la creación de logotipos, ilustraciones y diseños visuales.");
+    printf("Curiosidad: Los archivos de diseño gráfico se utilizan en la creación de logotipos, ilustraciones y diseños visuales./n");
 }
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
 #line 105 "p2.l"
 {
-    printf("¡Hoja de cálculo en acción! Nombre del archivo: %s\n", yytext);
+    printf("\n¡Hoja de cálculo en acción! Nombre del archivo: %s\n", yytext);
     printf("Nombre: %.*s\n", (int)(strcspn(yytext, ".")), yytext);
     printf("Extensión: %s\n", yytext + strcspn(yytext, ".") + 1);
     printf("Tipo de archivo: Hoja de cálculo\n");
-    printf("Curiosidad: Las hojas de cálculo son herramientas poderosas para realizar cálculos y análisis de datos.");
+    printf("Curiosidad: Las hojas de cálculo son herramientas poderosas para realizar cálculos y análisis de datos./n");
 }
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
 #line 113 "p2.l"
 {
-    printf("¡Programa en ejecución! Nombre del archivo: %s\n", yytext);
+    printf("\n¡Programa en ejecución! Nombre del archivo: %s\n", yytext);
     printf("Nombre: %s\n", yytext);
     printf("Extensión: %s\n", yytext + strcspn(yytext, ".") + 1);
     printf("Tipo de archivo: Programa ejecutable\n");
-    printf("Curiosidad: Los archivos ejecutables son programas informáticos que realizan tareas específicas en una computadora.");
+    printf("Curiosidad: Los archivos ejecutables son programas informáticos que realizan tareas específicas en una computadora./n");
 }
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
 #line 122 "p2.l"
 {
-    printf("¡Archivo desconocido! Nombre del archivo: %s\n", yytext);
+    printf("\n¡Archivo desconocido! Nombre del archivo: %s\n", yytext);
     printf("Nombre: %s\n", yytext);
     printf("Extensión: %s\n", yytext + strcspn(yytext, ".") + 1);
     printf("Tipo de archivo: Desconocido\n");
