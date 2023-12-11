@@ -33,8 +33,10 @@ El analizador puede determinar los siguientes tipos de archivo basándose en la 
 - Correo
 - eBook
 - Código fuente
+- Programa ejecutable
 - Diseño gráfico
 - Hoja de cálculo
+- Desconocido
 
 Si la extensión del archivo no coincide con ninguno de estos tipos, se mostrará "Tipo de archivo desconocido".
 
